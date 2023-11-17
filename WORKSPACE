@@ -79,12 +79,12 @@ http_archive(
 )
 
 
-TFMD_COMMIT = "47170227144d2e90299f7a6f67c2939f1e10d0c8"
+TFMD_COMMIT = "7073f7452d6cecbb5279781451f7c3144c924367" # 1.14.0
 http_archive(
     name = "com_github_tensorflow_metadata",
     urls = ["https://github.com/tensorflow/metadata/archive/%s.zip" % TFMD_COMMIT],
     strip_prefix = "metadata-%s" % TFMD_COMMIT,
-    sha256 = "31f4f72343e0f040904ac4c8fea5e15c80d24c912272c2ba92a4de4dba42b526",
+    sha256 = "e888cc58f7c8e697119f7796dd7061803abdbd4615b8fae63c485f0ebaea05fc",
 )
 
 # TODO(b/177694034): Follow the new format for tensorflow import after TF 2.5.
@@ -103,13 +103,13 @@ http_archive(
     ],
 )
 
-PYBIND11_COMMIT = "f1abf5d9159b805674197f6bc443592e631c9130"
+PYBIND11_COMMIT = "8a099e44b3d5f85b20f05828d919d2332a8de841"  # 2.11.1
 http_archive(
   name = "pybind11",
   build_file = "//third_party:pybind11.BUILD",
   strip_prefix = "pybind11-%s" % PYBIND11_COMMIT,
   urls = ["https://github.com/pybind/pybind11/archive/%s.zip" % PYBIND11_COMMIT],
-  sha256 = "4972f216f17f35e19d0afe54b0f30fe80ab1a7e57b65328530388285f36c7533",
+  sha256 = "8f4b7f28d214e36301435c055076c36186388dc9617117802cba8a059347cb00",
 )
 
 load("//third_party:python_configure.bzl", "local_python_configure")
