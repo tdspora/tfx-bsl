@@ -173,7 +173,7 @@ setup(
         'numpy>=1.22.0',
         'pandas>=1.0,<2',
         'protobuf>=3.20.3,<5',
-        'pyarrow>=10,<11',
+        'pyarrow<15,>=4.0.0',
         'tensorflow>=2.13,<3',
         'tensorflow-metadata' + select_constraint(
             default='>=1.14.0,<1.15.0',
